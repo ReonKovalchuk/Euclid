@@ -357,7 +357,7 @@ p {
 }
 
 
-.FAQ__accordeon-btn {
+.FAQ__accordion-btn {
 	width: 100%;
 	border: none;
 	outline: none;
@@ -370,16 +370,17 @@ p {
 	transition: 0.4s
 }
 
-.FAQ__accordeon-btn:after {
+.FAQ__accordion-btn:after {
 	display: inline-block;
 	content: url(../img/+х.svg);
 	width: 50px;
 	height: 50px;
 	float: right;
+	transition: all 0.2s ease-out;
 }
 
 
-.FAQ__tr:hover .FAQ__accordeon-btn:after{
+.FAQ__tr:hover .FAQ__accordion-btn:after{
 	content: url(../img/+х-orange.svg);
 }
 
@@ -388,20 +389,21 @@ p {
 	max-width: 56%;
 	display: none;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 
-.panel_active {
+/* .panel_active {
 	margin-top: 30px;
 	max-width: 56%;
 	display: block;
   	overflow: hidden;
   
-}
+} */
 
 .acc_btn_active:after {
 	transform: rotate(45deg);
+	transition: all 0.2s ease-out;
 }
 
 
@@ -412,6 +414,102 @@ p {
 	padding: 50px 75px 50px 75px;
 	background-color: black;
 	
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+}
+
+.footer__message-us-form {
+	width: 570px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.footer__heading {
+	color: #cacaca;
+	margin-bottom: 25px;
+}
+
+.footer__logo {
+	margin-bottom: 20px;
+}
+
+.footer__logo,.footer__link {
+	display: block;
+}
+
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.footer__link {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 2;
+	color: #cacaca;
+}
+
+.footer__socials-icon { 
+	display: inline-block;
+	margin-right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #666666; 
+    transition-duration: 0.2s;
+}
+
+.footer__socials-icon:hover, .footer__socials-icon:active { 
+    background: #cc9933;
+}
+
+.footer__socials-icon:focus {
+    background: #A47312;
+}
+
+.ok-icon {
+    -webkit-mask-image: url(../img/ok.svg);
+    mask-image: url(../img/ok.svg);
+}
+
+.vk-icon {
+    -webkit-mask-image: url(../img/vk.svg);
+    mask-image: url(../img/vk.svg);
+}
+
+.footer__input {
+	padding: 14px;
+	max-width: 100%;
+	background-color: #414141;
+	color: #cacaca;
+	border: none;
+	border-radius: 16px;
+}
+
+.textarea {
+	height: 150px;
+}
+
+.footer__submit-btn {
+	padding: 19px 52px;
+	margin-right: 22px;
+}
+
+
+.footer__legal-info {
+	max-width: 363px;
+	color: #cacaca;
+	align-self: center;
+}
+
+label {
+	color: #cacaca;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
