@@ -50,16 +50,21 @@
                     </ul>
                 </li>
             </nav>
-            <!-- <div class="header__search-container"> -->
-            <form class="header__search-form" role="search">
-                <input class="header__search-input" type="search" placeholder="Что будем искать?" name="q">
-                <button type="submit" class="header__search-btn"><i class="header__search-icon"></i></button>
-                <button type="action" class="header__close-search-btn"><i
-                        class="header__close-search-icon"></i></button>
+            
+            <form class="header__search-form">
+                <input class="header__search-input"  placeholder="Что будем искать?" name="q">
+                <button class="header__search-btn"
+                        type="button"
+                        onclick="activateSearch()"></button>
+                <button type="action" 
+                        class="header__close-search-btn"
+                        type="button"
+                        onclick="deactivateSearch()"></button>
             </form>
 
-            <!-- </div> -->
+           
         </div>
+        
     </header>
     <main>
         <div class="container">
