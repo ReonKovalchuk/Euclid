@@ -468,6 +468,7 @@ button {cursor: pointer;}
 
 .FAQ__tr {
 	border-top: 1px solid #cacaca;
+	transition: 0.4s ease-out;
 }
 
 .FAQ__tr:last-of-type {
@@ -508,6 +509,7 @@ button {cursor: pointer;}
 
 .FAQ__tr:hover .FAQ__accordion-btn:after{
 	content: url(../img/+х-orange.svg);
+	transition: all 0.2s ease-out;
 }
 
 .FAQ__panel {
@@ -576,7 +578,7 @@ button {cursor: pointer;}
 }
 
 .footer__link {
-	padding: 2px 5px;
+	/* padding: 2px 5px; */
 	text-align: left;
 	font-weight: 600;
 	font-size: 18px;
@@ -590,40 +592,56 @@ button {cursor: pointer;}
 }
 
 .footer__link:focus {
-	border: 1px solid #FF9900;
+	outline-color: #FF9900;
+	outline-style: solid;
+	outline-width: 1px;
+	outline-offset: 5px; 
 }
 
 .footer__link:active {
 	color: #E1670E;
 }
 
-
-
 .footer__socials-icon { 
 	display: inline-block;
-	margin-right: 25px;
-    width: 60px;
-    height: 60px;
+	margin-right: 15px;
+    width: 70px;
+    height: 70px;
     background: #666666; 
     transition-duration: 0.2s;
 }
 
-.footer__socials-icon:hover, .footer__socials-icon:active { 
+.footer__socials-icon:hover { 
     background: #cc9933;
 }
 
+.footer__socials-icon:active {
+	background: #E1670E;
+}
+
 .footer__socials-icon:focus {
-    background: #A47312;
+    background: #666666;
+	/* border: 2px solid #FF9900; */
+	outline-color: #FF9900;
+	outline-style: solid;
+	outline-width: 1px;
+	outline-offset: 5px; 
 }
 
 .ok-icon {
     -webkit-mask-image: url(../img/ok.svg);
     mask-image: url(../img/ok.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 60px 60px;
 }
 
 .vk-icon {
     -webkit-mask-image: url(../img/vk.svg);
     mask-image: url(../img/vk.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 60px 60px;
 }
 
 .footer__input {
