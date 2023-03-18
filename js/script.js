@@ -20,9 +20,11 @@ for (i = 0; i < acc.length; i++) {
 function activateSearch() {
     const search = document.querySelector('.header__search-form');
     const sInput = document.querySelector('.header__search-input');
+    const logo = document.querySelector('.header__logo-link');
     if (search.classList.contains('search-form-active')) {
         alert('searching');
     } else {
+        logo.classList.toggle('hidden');
         search.classList.toggle('search-form-active');
         sInput.focus();
     }
@@ -30,26 +32,16 @@ function activateSearch() {
 
 function deactivateSearch() {
     const search = document.querySelector('.search-form-active');
+    const logo = document.querySelector('.header__logo-link');
+    logo.classList.toggle('hidden');
+        
     search.classList.toggle('search-form-active');
 
 }
-// const search = document.querySelector('.header__search-form');
-// const sBtn = document.querySelector('.header__search-btn');
-// const sInput = document.querySelector('.header__search-input');
-// const sBtnClose = document.querySelector('.header__close-search-btn');
 
-
-
-// sBtn.onclick = function () {
-//     search.classList.add('search-form-active');
-//     sInput.focus();
-//     console.log('добавили класс?');
-//     console.log(search.classList.length);
-// }
-    
-// sBtnClose.onclick = function () {
-//     search.classList.remove('search-form-active');
-//     console.log('убрали класс?');
-//     console.log(search.classList.length);
-//     }
-
+function activateBurger(element) {
+    let menuBtn = element;
+    let nav = document.querySelector('.header__nav');
+    menuBtn.classList.toggle('burger_active');
+    nav.classList.toggle('nav_active');
+}

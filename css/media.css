@@ -1,0 +1,162 @@
+@media (max-width: 1920px) {
+    .container {
+        padding: 0px 75px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .about__overlay {
+        flex-direction: column;
+    }
+
+    
+
+}
+
+@media (max-width: 1310px) {
+    .header__burger {
+        /*Display stuff*/
+            display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    .header__nav {
+        display: none;
+        align-items: unset;
+    }
+
+    .nav_active {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        padding-top: 170px;
+        padding-left: 50px;
+        display: flex;
+        width: 420px;
+        height: 100vh;
+        overflow: scroll;
+        background-color: white;
+        z-index: 2;
+        transition: max-height 2s ease-out;
+    }
+
+    .nav_active .header__nav-list {
+        flex-direction: column;
+    }
+    .about-cards {
+        padding-right: 48px;
+    }
+    .stages__description {
+        max-width: 50%;
+    }  
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 0px 50px;
+    }
+
+    .header {
+        padding: 26px 0px;
+    }
+    .hero__carousel{
+        height: 668px;
+    }
+    
+
+    .header__logo-image {
+        width: 150px;
+    }
+
+    .hero__heading {
+        font-size: 60px;
+    }
+    
+    .hero__text {
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .about__offer1 {
+        height: 640px;
+    }
+    
+    .about__overlay {
+        flex-direction: row;
+    }
+
+    .about__offers-container {
+        flex-direction: column;
+    }
+          
+    .footer__legal-info {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .hero__carousel{
+        height: 652px;
+    }
+
+    .hero__heading {
+        font-size: 50px;
+    }
+    
+    .hero__text {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+
+    .about-cards {
+        padding: 72px 48px 32px 170px;
+    }
+
+    .about__offer1 {
+        height: 650px;
+    }
+
+    .about__offer2, .about__offer3 {
+        background-size: 114px 99px;
+        background-position: left 40px center;
+    }
+
+    .stages__carousel {
+        flex-direction: column-reverse;
+    }
+    .stages__description {
+        max-width: 100%;
+    }
+
+    .stages__image {
+        height: 284px;
+    }
+
+    .stages__steps-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stages__steps-item {
+        margin-right: 0px;
+    }
+
+    .footer-container {
+        flex-direction: column-reverse;
+    }
+    .footer__inside-links {
+        display: none;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0px 15px;
+    }
+}
+

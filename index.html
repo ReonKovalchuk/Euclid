@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" media="screen" href="css/media.css">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
     <!-- JavaScript Bundle with Popper -->
@@ -24,31 +24,38 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <div class="header__burger">
+            <!-- <div class="header__menu"> -->
 
+            
+            <div class="header__burger" onclick="activateBurger(this)">
+                <span class="header__buns burger-top"></span>
+                <span class="header__buns burger-middle"></span>
+                <span class="header__buns burger-bottom"></span>
             </div>
+
+<!-- </div> -->
 
             <a href="#" class="header__logo-link">
                 <img src="img/Logo.png" alt="" class="header__logo-image">
             </a>
             <nav class="header__nav">
-                <li class="header__nav-list">
-                    <ul class="header__nav-item">
-                        <a href="#about" class="header__nav-link">О нас</a>
-                    </ul>
-                    <ul class="header__nav-item">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#about" class="header__nav-link">О нас</a>
+                    </li>
+                    <li class="header__nav-item">
                         <a href="#projects" class="header__nav-link">Проекты</a>
-                    </ul>
-                    <ul class="header__nav-item">
+                    </li>
+                    <li class="header__nav-item">
                         <a href="#stages" class="header__nav-link">Этапы</a>
-                    </ul>
-                    <ul class="header__nav-item">
+                    </li>
+                    <li class="header__nav-item">
                         <a href="#testimonials" class="header__nav-link">Отзывы</a>
-                    </ul>
-                    <ul class="header__nav-item">
+                    </li>
+                    <li class="header__nav-item">
                         <a href="#contact" class="header__nav-link">Контакты</a>
-                    </ul>
-                </li>
+                    </li>
+                </ul>
             </nav>
             
             <form class="header__search-form">
@@ -152,7 +159,7 @@
                             <button class="stages__agreement-btn">Договор</button>
                         </div>
                     </div>
-                    <div class="stages__image">
+                    <div class="stages__image">  
 
                     </div>
                 </div>
@@ -250,8 +257,8 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer__links">
+                <img src="img/Logo_white.svg" alt="Эвклид логотип" class="footer__logo">
                 <div class="footer__inside-links">
-                    <img src="img/Logo-white.svg" alt="Эвклид логотип" class="footer__logo">
                     <a href="#" class="footer__link">О нас</a>
                     <a href="#" class="footer__link">Проекты</a>
                     <a href="#" class="footer__link">Отзывы</a>
