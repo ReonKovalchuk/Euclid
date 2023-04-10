@@ -21,10 +21,12 @@ function activateSearch() {
     const search = document.querySelector('.header__search-form');
     const sInput = document.querySelector('.header__search-input');
     const logo = document.querySelector('.header__logo-link');
+    const burger = document.querySelector('.header__burger');
     if (search.classList.contains('search-form-active')) {
         alert('searching');
     } else {
         logo.classList.toggle('hidden');
+        burger.classList.toggle('hidden');
         search.classList.toggle('search-form-active');
         sInput.focus();
     }
@@ -33,7 +35,9 @@ function activateSearch() {
 function deactivateSearch() {
     const search = document.querySelector('.search-form-active');
     const logo = document.querySelector('.header__logo-link');
+    const burger = document.querySelector('.header__burger');
     logo.classList.toggle('hidden');
+    burger.classList.toggle('hidden');
         
     search.classList.toggle('search-form-active');
 

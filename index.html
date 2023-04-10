@@ -76,11 +76,12 @@
         <div class="container">
             <section class="hero">
                 <div class="hero__carousel">
-
+                    <div class="hero__description">
                     <h1 class="hero__heading">Проектные решения любой сложности</h1>
                     <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей
                         день остаются уделом проектантов</p>
-                    <button class="hero__btn btn-main">Заказать расчёт</button>
+                    </div>
+                    <button class="hero__btn btn-main btn">Заказать расчёт</button>
                 </div>
             </section>
 
@@ -101,12 +102,15 @@
 
                 <div class="about__offers-container">
                     <div class="about__offer1">
+                        <div class="about__offer1-image">
+
+                        </div>
                         <div class="about__overlay">
                             <p class="about__overlay-text">
                                 Принимая во внимание показатели успешности, перспективное планирование способствует
                                 подготовке и реализации новых принципов
                             </p>
-                            <button class="about__more-btn">Подробнее</button>
+                            <button class="about__more-btn btn">Подробнее</button>
                         </div>
                     </div>
                     <div class="about__offers">
@@ -155,8 +159,8 @@
                             нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
                             конкретные выводы, разумеется, призваны к ответу.</p>
                         <div class="stages__buttons">
-                            <button class="stages__more-btn btn-main">Подробнее</button>
-                            <button class="stages__agreement-btn">Договор</button>
+                            <button class="stages__more-btn btn-main btn">Подробнее</button>
+                            <button class="stages__agreement-btn btn">Договор</button>
                         </div>
                     </div>
                     <div class="stages__image">  
@@ -295,14 +299,15 @@
                             class="footer__input textarea"></textarea>
                     <!-- <input type="text" name="" id="message" placeholder="Сообщение"> -->
                     <div class="footer__submit">
-                        <input type="submit" class="footer__submit-btn btn-main" value="Отправить данные">
-                        <input type="checkbox" 
+                        <input type="submit" class="footer__submit-btn btn-main btn" value="Отправить данные">
+                        <div class="footer__pd-use"><input type="checkbox" 
                                 name="pd-use" 
                                 id="pd-use" 
                                 required 
                                 value="agree"
                                 class="footer__pd-use"> 
-                        <label for="pd-use">Согласен на обработку данных</label>
+                        <label for="pd-use-label">Согласен на обработку данных</label>
+                    </div>
                     </div>
                 </form>
             </div>

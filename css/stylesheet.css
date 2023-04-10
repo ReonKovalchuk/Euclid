@@ -41,7 +41,7 @@ p {
 /*Box model stuff*/
 	margin-bottom: 0px;
 /*Miscellaneous*/
-	line-height: 32px;
+	line-height: 2;
 }
 
 button {
@@ -64,11 +64,13 @@ button {
 	font-size: 48px;
 	font-weight: normal;
 }
-
+.btn {
+	border-radius: 16px;
+}
 .btn-main {
 /*Box model stuff*/
 	border: none;
-	border-radius: 16px;
+	
 	background-color: #FF9900;
 /*Typography stuff*/
 	font-weight: 600;
@@ -119,6 +121,7 @@ button {
 	width: 30px;
 	height: 23px;
 	cursor: pointer;
+	z-index: unset;
 	
 }
 
@@ -159,7 +162,7 @@ button {
 
 .header__logo-image {
 /*Box model stuff*/
-    width: 225px;
+    max-width: 225px;
 	/* margin-left: auto; */
 	
 }
@@ -273,7 +276,8 @@ button {
 display: inline;
 	flex-grow: 1;
 /*Box model stuff*/
-	max-width: 450px;                      
+	max-width: 450px;
+	min-width: 50px;                      
 /*Manipulations stuff*/
 	transition: max-width 0.3s ease-out;
 /*Miscellaneous*/
@@ -374,10 +378,15 @@ display: inline;
 }
 
 .hero__carousel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 24px;
+
 /*Box model stuff*/
 	max-width: 1770px;
 	height: 620px;
-	padding: 100px 0px 100px 80px;
+	padding: 100px 80px;
 	border-radius: 32px;
 	background-image: url(../img/low-angle-photo-of-balconies-2462015\ 1.png);
 	background-repeat: no-repeat;
@@ -391,6 +400,11 @@ display: inline;
 	color: white;
 	
 }
+
+.hero__description {
+	overflow: scroll;
+}
+
 .hero__heading {
 /*Box model stuff*/
 	margin-bottom: 24px;
@@ -401,7 +415,7 @@ display: inline;
 
 .hero__text {
 /*Box model stuff*/
-	margin-bottom: 90px;
+	
 /*Typography stuff*/
 	font-size: 24px;
 	font-weight: 600;
@@ -414,6 +428,8 @@ display: inline;
 	font-size: 23px;
 /*Miscellaneous*/
 line-height: 1;
+max-width: fit-content;
+/* margin-bottom: auto; */
 	
 }
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -448,6 +464,16 @@ line-height: 1;
 	background-size: cover;
 	flex-shrink: 1;
 	flex-grow: 1;
+}
+
+.about__offer1-image{
+	display: none;
+	background-image: url(../img/worker.png);
+	background-size: cover;
+	height: 200px;
+	border-radius: 8px;
+	margin-bottom: 8px;
+
 }
 
 .about__offer-heading {
@@ -490,7 +516,6 @@ line-height: 1;
 /*Box model stuff*/
 	padding: 15px 35px;
 	border: 3px solid #FF9900;
-	border-radius: 16px;
 	background-color: transparent;
 /*Typography stuff*/
 	font-weight: 600;
@@ -515,7 +540,7 @@ line-height: 1;
 	display: flex;
 	flex-direction: column;
 /*Box model stuff*/
-	max-width: 870px;
+	/* max-width: 870px; */
 /*Miscellaneous*/
 	gap: 32px;
 }
@@ -621,7 +646,7 @@ line-height: 1;
 /*Box model stuff*/
 	padding: 18px 38px;
 	border: 1px solid black;
-	border-radius: 16px;
+	
 	background-color: transparent;
 /*Manipulations stuff*/
 	transition: all 0.2s ease-out;
@@ -761,7 +786,7 @@ line-height: 1;
 
 .footer {
 /*Box model stuff*/
-	padding: 75px 0px;
+	padding: 75px 0px 50px 0px;
 	background-color: black;
 	
 }
@@ -795,6 +820,8 @@ line-height: 1;
 .footer__logo {
 /*Box model stuff*/
 	margin-bottom: 20px;
+	height: 72px;
+
 }
 
 .footer__logo,.footer__link {
@@ -807,6 +834,7 @@ line-height: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: baseline;
 }
 
 .footer__link {
@@ -923,7 +951,9 @@ line-height: 1;
 	margin-right: 22px;
 	padding: 19px 52px;
 }
-
+.footer__pd-use {
+	white-space: nowrap;
+}
 
 .footer__legal-info {
 /*Display stuff*/
