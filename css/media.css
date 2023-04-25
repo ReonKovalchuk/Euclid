@@ -142,7 +142,7 @@
         background-position: left 40px center;
     }
 
-    .stages__carousel {
+    .tab-content-active {
         flex-direction: column-reverse;
     }
     .stages__description {
@@ -153,13 +153,13 @@
         height: 284px;
     }
 
-    .stages__steps-list {
+    .tab-content-active {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .stages__steps-item {
+    .stages__tab-btn {
         margin-right: 0px;
     }
 

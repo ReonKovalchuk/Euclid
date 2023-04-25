@@ -44,11 +44,56 @@ function initializeAccordion() {
       }
     }
   }
-};
+}
+
+// function tabBtnOnClick (clickEvent, el) {
+//   console.log(1);
+//     const path = clickEvent.currentTarget.dataset.path;
+//     console.log(path);
+//     document.querySelectorAll('stages__tab-content').forEach (function(tabContent){
+//       tabContent.classList.remove('tab-content-active');
+//     });
+//     document.querySelector('[data-target="${path}"]').classList.add('tab-content-active');
+//     document.querySelectorAll('.stages__tab-btn').forEach (function(tabsBtn){
+//       tabsBtn.classList.remove('tab-btn-active');
+      
+//     });
+//     el.classList.add('tab-btn-active');
+
+  
+// }
+
+function initializeTabs () {
+  document.querySelectorAll('.stages__tab-btn').forEach(function (tabsBtn) {
+    // подключаем вкладкам ОнКлик
+    tabsBtn.addEventListener('click',function (event) {
+      const path = event.currentTarget.dataset.path;
+      console.log(path);
+
+      document.querySelectorAll('.stages__tab-content').forEach(function (tabContent) {
+        //у всех содержимых убираем активность
+        tabContent.classList.remove('tab-content-active');
+      });
+
+      //у содержимого, соответсвующего вкладке ставим активность
+      document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active');
+
+      //у всех вкладок убираем активность, ставим только для выбранной
+      document.querySelectorAll('.stages__tab-btn').forEach(function (tabsBtn) {
+        tabsBtn.classList.remove('tab-btn-active');
+      });
+      this.classList.add('tab-btn-active');
+
+
+    });
+  });
+}
+
 
 window.addEventListener('DOMContentLoaded', function () {
   initializeSwiper();
   initializeAccordion();
+  initializeTabs();
 })
 
 function activateSearch() {
@@ -83,3 +128,4 @@ function activateBurger(element) {
     menuBtn.classList.toggle('burger_active');
     nav.classList.toggle('nav_active');
 };
+

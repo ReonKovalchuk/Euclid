@@ -605,14 +605,14 @@ max-width: fit-content;
 	margin-bottom: 50px;
 }
 
-.stages__steps-list {
+.stages__tabs {
 /*Box model stuff*/
 	margin-bottom: 45px;
 }
 
-.stages__steps-item {
+.stages__tab-btn {
 /*Display stuff*/
-	display: inline;
+	/* display: inline; */
 /*Box model stuff*/
 	margin-right: 82px;
 /*Typography stuff*/
@@ -622,24 +622,30 @@ max-width: fit-content;
 /*Miscellaneous*/
 	cursor: pointer;
 	line-height: 1;
+	border: none;
+	background: none;
 }
 
-.stages__steps-item:hover {
+.stages__tab-btn:hover {
 /*Typography stuff*/
 	color: #FF9900;
 }
-.stages__steps-item:focus {
+.stages__tab-btn:focus {
 /*Box model stuff*/
 	outline:#FF9900 solid 1px 5px;
 }
 
-.stages__steps-item:active {
+.stages__tab-btn:active, .tab-btn-active {
 /*Typography stuff*/
 	color: #E1670E;
 }
 
-.stages__carousel {
+.stages__tab-content {
 /*Display stuff*/
+	display: none;
+}
+
+.tab-content-active {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -701,11 +707,24 @@ max-width: fit-content;
 /*Box model stuff*/
 	width: 100%;
 	border-radius: 32px;
-	background-image: url(../img/office.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
+}
+
+#tab1 {
+	background-image: url(../img/office.png);	
+}
+
+#tab2 {
+	background-image: url(../img/papers.png);	
+}
+#tab3 {
+	background-image: url(../img/laptop.png);	
+}
+#tab4 {
+	background-image: url(../img/desk.png);	
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
