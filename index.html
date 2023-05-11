@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/normalize.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    
+
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" media="screen" href="css/media.css">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
-    
-  
+
+
 
 </head>
 
@@ -24,51 +24,49 @@
         <div class="container header__container">
             <!-- <div class="header__menu"> -->
 
-            
-            <div class="header__burger" id="burger" onclick="activateBurger(this)">
+
+            <div class="header__burger" id="burger" onclick="activateBurger(this)" aria-label="Меню">
                 <span class="header__buns burger-top"></span>
                 <span class="header__buns burger-middle"></span>
                 <span class="header__buns burger-bottom"></span>
             </div>
 
-<!-- </div> -->
+            <!-- </div> -->
 
-            <a href="#" class="header__logo-link">
-                <img src="img/Logo.png" alt="" class="header__logo-image">
+            <a href="#" class="header__logo-link" aria-label="На главную">
+                <img src="img/Logo.png" alt="Логотип Эвклид" class="header__logo-image">
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" aria-label="навигация">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#about" class="header__nav-link">О нас</a>
+                        <a href="#about" class="header__nav-link" tabindex="0">О нас</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#projects" class="header__nav-link">Проекты</a>
+                        <a href="#projects" class="header__nav-link" tabindex="0">Проекты</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#stages" class="header__nav-link">Этапы</a>
+                        <a href="#stages" class="header__nav-link" tabindex="0">Этапы</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#testimonials" class="header__nav-link">Отзывы</a>
+                        <a href="#testimonials" class="header__nav-link" tabindex="0">Отзывы</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#contact" class="header__nav-link">Контакты</a>
+                        <a href="#contact" class="header__nav-link" tabindex="0">Контакты</a>
                     </li>
                 </ul>
             </nav>
-            
+
             <form class="header__search-form">
-                <input class="header__search-input"  placeholder="Что будем искать?" name="q">
-                <button class="header__search-btn"
-                        type="button"
-                        onclick="activateSearch()"></button>
-                <button class="header__close-search-btn"
-                        type="button"
-                        onclick="deactivateSearch()"></button>
+                <input class="header__search-input" placeholder="Что будем искать?" name="q">
+                <button class="header__search-btn" type="button" role="button" onclick="activateSearch()"
+                    aria-label="поиск"></button>
+                <button class="header__close-search-btn" type="button" role="button" onclick="deactivateSearch()"
+                    aria-label="закрыть поиск"></button>
             </form>
 
-           
+
         </div>
-        
+
     </header>
     <main>
         <div class="container">
@@ -77,10 +75,11 @@
                     <div class="hero__swiper-overlay">
                         <div class="hero__description">
                             <h1 class="hero__heading">Проектные решения любой сложности</h1>
-                            <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей
+                            <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по
+                                сей
                                 день остаются уделом проектантов</p>
                         </div>
-                        <button class="hero__btn btn-main btn">Заказать расчёт</button>
+                        <button class="hero__btn btn-main btn" role="button">Заказать расчёт</button>
                     </div>
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -90,19 +89,20 @@
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true"></span>
-                        <span class="swiper-pagination-bullet" tabindex="0"></span>
-                        <span class="swiper-pagination-bullet" tabindex="0"></span>
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                            aria-current="true"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
                     </div>
-            
-                    
+
+
                 </div>
             </section>
 
             <section class="about" id="about">
-                <h1 class="about__heading section-heading">
+                <h2 class="about__heading section-heading">
                     О нас
-                </h1>
+                </h2>
                 <p class="about__text">
                     Также как перспективное планирование создаёт необходимость включения в производственный план целого
                     ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности
@@ -124,7 +124,7 @@
                                 Принимая во внимание показатели успешности, перспективное планирование способствует
                                 подготовке и реализации новых принципов
                             </p>
-                            <button class="about__more-btn btn">Подробнее</button>
+                            <button class="about__more-btn btn" role="button">Подробнее</button>
                         </div>
                     </div>
                     <div class="about__offers">
@@ -143,15 +143,27 @@
             </section>
 
             <section class="stages" id="stages">
-                <h1 class="stages__heading section-heading">
+                <h2 class="stages__heading section-heading">
                     Как мы работаем
-                </h1>
-                <div class="stages__tabs">
-                    <button class="stages__tab-btn tab-btn-active" type="button" data-path="one">1 шаг</button>
-                    <button class="stages__tab-btn" type="button" data-path="two">2 шаг</button>
-                    <button class="stages__tab-btn" type="button" data-path="three">3 шаг</button>
-                    <button class="stages__tab-btn" type="button" data-path="four">4 шаг</button>
-                </div>
+                </h2>
+                <ul class="stages__tabs">
+                    <li class="stages__tabs-li">
+                        <button class="stages__tab-btn tab-btn-active" type="button" data-path="one"
+                            aria-label="Первый шаг">1 шаг</button>
+                    </li>
+                    <li class="stages__tabs-li">
+                        <button class="stages__tab-btn" type="button" data-path="two" aria-label="Второй шаг">2
+                            шаг</button>
+                    </li>
+                    <li class="stages__tabs-li">
+                        <button class="stages__tab-btn" type="button" data-path="three" aria-label="Третий шаг">3
+                            шаг</button>
+                    </li>
+                    <li class="stages__tabs-li">
+                        <button class="stages__tab-btn" type="button" data-path="four" aria-label="Четвертый шаг">4
+                            шаг</button>
+                    </li>
+                </ul>
                 <div class="stages__tab-content tab-content-active" data-target="one">
                     <div class="stages__description">
                         <h3 class="stages__stage-name">Проводим консультацию</h3>
@@ -169,79 +181,108 @@
                             <button class="stages__agreement-btn btn">Договор</button>
                         </div>
                     </div>
-                    <div class="stages__image" id="tab1">  
+                    <div class="stages__image" id="tab1">
 
                     </div>
                 </div>
                 <div class="stages__tab-content" data-target="two">
                     <div class="stages__description">
                         <h3 class="stages__stage-name">Составляем смету</h3>
-                        <p class="stages__text">Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+                        <p class="stages__text">Внедрения и модернизации приоритизации разума над эмоциями. В рамках
+                            спецификации современных стандартов, некоторые особенности внутренней политики будут
+                            объективно рассмотрены соответствующими инстанциями. А также представители современных
+                            социальных резервов, инициированные исключительно синтетически, ограничены исключительно
+                            образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных
+                            источников, современные исследования подвергнуты целой серии независимых исследований.</p>
                         <div class="stages__buttons">
                             <button class="stages__more-btn btn-main btn">Подробнее</button>
                             <button class="stages__agreement-btn btn">Договор</button>
                         </div>
                     </div>
-                    <div class="stages__image" id="tab2">  
+                    <div class="stages__image" id="tab2">
 
                     </div>
                 </div>
                 <div class="stages__tab-content " data-target="three">
                     <div class="stages__description">
                         <h3 class="stages__stage-name">Привлекаем подрядчиков</h3>
-                        <p class="stages__text">Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.</p>
+                        <p class="stages__text">Идейные соображения высшего порядка, а также новая модель
+                            организационной деятельности требует анализа прогресса профессионального сообщества. Высокий
+                            уровень вовлечения представителей целевой аудитории является чётким доказательством простого
+                            факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших
+                            направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель
+                            организационной деятельности говорит о возможностях системы массового участия. Принимая
+                            во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение
+                            нашей деятельности позволяет выполнить важные задания по разработке прогресса
+                            профессионального сообщества.</p>
                         <div class="stages__buttons">
                             <button class="stages__more-btn btn-main btn">Подробнее</button>
                             <button class="stages__agreement-btn btn">Договор</button>
                         </div>
                     </div>
-                    <div class="stages__image" id="tab3">  
+                    <div class="stages__image" id="tab3">
 
                     </div>
                 </div>
                 <div class="stages__tab-content " data-target="four">
                     <div class="stages__description">
                         <h3 class="stages__stage-name">Инспектируем все этапы работ</h3>
-                        <p class="stages__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит 
-                            о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+                        <p class="stages__text">Высокий уровень вовлечения представителей целевой аудитории является
+                            чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую
+                            зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам,
+                            что новая модель организационной деятельности говорит
+                            о возможностях системы массового участия. Принимая во внимание показатели успешности,
+                            постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
                         <div class="stages__buttons">
                             <button class="stages__more-btn btn-main btn">Подробнее</button>
                             <button class="stages__agreement-btn btn">Договор</button>
                         </div>
                     </div>
-                    <div class="stages__image" id="tab4">  
+                    <div class="stages__image" id="tab4">
 
                     </div>
                 </div>
             </section>
 
             <section class="FAQ" id="FaQ">
-                <h1 class="FAQ__heading section-heading">
+                <h2 class="FAQ__heading section-heading">
                     Часто задаваемые вопросы
-                </h1>
+                </h2>
                 <table class="FAQ__table">
                     <tbody>
                         <tr class="FAQ__tr">
                             <td class="FAQ__td">
-                                <button class="FAQ__accordion-btn" type="button">Из чего формируется конечная стоимость проекта?</button>
+                                <button class="FAQ__accordion-btn" type="button">Из чего формируется конечная стоимость
+                                    проекта?</button>
                                 <div class="FAQ__panel">
                                     <p class="FAQ__text">
-                                        Являясь всего лишь частью общей картины, непосредственные участники технического прогресса
+                                        Являясь всего лишь частью общей картины, непосредственные участники технического
+                                        прогресса
                                         призывают нас 
-                                        к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы.
-                                        Но высококачественный прототип будущего проекта является качественно новой ступенью
-                                        первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют
-                                        собой яркий пример континентально-европейского типа политической культуры, будут объявлены
-                                        нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы
-                                        институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                                        к новым свершениям, которые, в свою очередь, должны быть своевременно
+                                        верифицированы.
+                                        Но высококачественный прототип будущего проекта является качественно новой
+                                        ступенью
+                                        первоочередных требований. А ещё некоторые особенности внутренней политики,
+                                        которые представляют
+                                        собой яркий пример континентально-европейского типа политической культуры, будут
+                                        объявлены
+                                        нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные
+                                        признаки победы
+                                        институционализации призывают нас к новым свершениям, которые, в свою очередь,
+                                        должны быть
                                         указаны как претенденты на роль ключевых факторов.
                                         <br><br>
-                                        Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны
-                                        к ответу. Явные признаки победы институционализации набирают популярность среди определённых
+                                        Приятно, граждане, наблюдать, как некоторые особенности внутренней политики
+                                        могут быть призваны
+                                        к ответу. Явные признаки победы институционализации набирают популярность среди
+                                        определённых
                                         слоёв населения,
-                                        а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые
+                                        а значит, должны быть объединены в целые кластеры себе подобных. Банальные,
+                                        но неопровержимые
                                         выводы,
-                                        а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь,
+                                        а также многие известные личности призывают нас к новым свершениям, которые,
+                                        в свою очередь,
                                         должны быть представлены в исключительно положительном свете.
                                     </p>
                                 </div>
@@ -249,58 +290,61 @@
                         </tr>
                         <tr class="FAQ__tr">
                             <td class="FAQ__td">
-                                <button class="FAQ__accordion-btn" type="button">У меня есть свой проект. Сможем ли мы его доработать /
+                                <button class="FAQ__accordion-btn" type="button">У меня есть свой проект. Сможем ли мы
+                                    его доработать /
                                     реализовать?</button>
                                 <div class="FAQ__panel">
                                     <p class="FAQ__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatem soluta libero aliquid saepe in minima praesentium consequatur expedita vel recusandae nemo omnis autem rem reprehenderit. Dolorum voluptatibus veritatis libero?
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatem
+                                        soluta libero aliquid saepe in minima praesentium consequatur expedita vel
+                                        recusandae nemo omnis autem rem reprehenderit. Dolorum voluptatibus veritatis
+                                        libero?
                                     </p>
                                 </div>
                             </td>
                         </tr>
                         <tr class="FAQ__tr">
                             <td class="FAQ__td">
-                                <button class="FAQ__accordion-btn" type="button">Я выбираю между разными компаниями. В чём ваше отличие?</button>
+                                <button class="FAQ__accordion-btn" type="button">Я выбираю между разными компаниями.
+                                    В чём ваше отличие?</button>
                                 <div class="FAQ__panel">
                                     <p class="FAQ__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores sed, veritatis tenetur ex voluptate ut doloribus similique fugiat praesentium quas totam fugit quisquam incidunt dolores culpa minus placeat facere.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores
+                                        sed, veritatis tenetur ex voluptate ut doloribus similique fugiat praesentium
+                                        quas totam fugit quisquam incidunt dolores culpa minus placeat facere.
                                     </p>
                                 </div>
                             </td>
                         </tr>
                         <tr class="FAQ__tr">
                             <td class="FAQ__td">
-                                <button class="FAQ__accordion-btn" type="button">Могу ли я делегировать вам работу / согласование с подрядчиком /
+                                <button class="FAQ__accordion-btn" type="button">Могу ли я делегировать вам работу /
+                                    согласование с подрядчиком /
                                     организацией?</button>
                                 <div class="FAQ__panel">
                                     <p class="FAQ__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisi delectus exercitationem quasi, voluptatem quibusdam, alias optio sunt dicta temporibus ad. Suscipit sint, rerum fugit dolores exercitationem eum impedit asperiores.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nisi delectus
+                                        exercitationem quasi, voluptatem quibusdam, alias optio sunt dicta temporibus
+                                        ad. Suscipit sint, rerum fugit dolores exercitationem eum impedit asperiores.
                                     </p>
                                 </div>
                             </td>
                         </tr>
                         <tr class="FAQ__tr">
                             <td class="FAQ__td">
-                                <button class="FAQ__accordion-btn" type="button">Могу ли я вернуть деньги на каком-либо из этапов работ?</button>
+                                <button class="FAQ__accordion-btn" type="button">Могу ли я вернуть деньги на каком-либо
+                                    из этапов работ?</button>
                                 <div class="FAQ__panel">
                                     <p class="FAQ__text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati similique doloremque hic iure modi, impedit quas rem labore nesciunt ratione magnam quo sapiente cum autem commodi vitae unde eum.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati similique
+                                        doloremque hic iure modi, impedit quas rem labore nesciunt ratione magnam quo
+                                        sapiente cum autem commodi vitae unde eum.
                                     </p>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                
-                
-
-               
-
-                
-
-                
-
-
             </section>
         </div>
     </main>
@@ -309,65 +353,55 @@
             <div class="footer__links">
                 <img src="img/Logo_white.svg" alt="Эвклид логотип" class="footer__logo">
                 <div class="footer__inside-links">
-                    <a href="#" class="footer__link">О нас</a>
-                    <a href="#" class="footer__link">Проекты</a>
-                    <a href="#" class="footer__link">Отзывы</a>
-                    <a href="#" class="footer__link">Договор оферты</a>
-                    <a href="#" class="footer__link">Договор подряда</a>
-                    <a href="#" class="footer__link">Конфиденциальность</a>
-                    <a href="#" class="footer__link">Партнёрское соглашение</a>
+                    <a href="#" class="footer__link" tabindex="0">О нас</a>
+                    <a href="#" class="footer__link" tabindex="0">Проекты</a>
+                    <a href="#" class="footer__link" tabindex="0">Отзывы</a>
+                    <a href="#" class="footer__link" tabindex="0">Договор оферты</a>
+                    <a href="#" class="footer__link" tabindex="0">Договор подряда</a>
+                    <a href="#" class="footer__link" tabindex="0">Конфиденциальность</a>
+                    <a href="#" class="footer__link" tabindex="0">Партнёрское соглашение</a>
                 </div>
                 <div class="footer__socials-links">
-                    <div class="footer__socials-icon vk-icon"></div>
-                    <div class="footer__socials-icon ok-icon"></div>
+                    <div class="footer__socials-icon vk-icon" aria-label="страница Вконтакте"></div>
+                    <div class="footer__socials-icon ok-icon" aria-label="страница в одноклассниках"></div>
                 </div>
-                
+
             </div>
 
             <div class="footer__form-container">
                 <h2 class="footer__heading section-heading">Оставить заявку</h2>
                 <form action="" method="post" class="footer__message-us-form">
-                    <input type="text" 
-                            name="name" 
-                            id="name" 
-                            placeholder="Фамилия, имя и отчество*" 
-                            required 
-                            class="footer__input">
-                    <input type="email" 
-                            name="email" 
-                            id="email" 
-                            placeholder="Email*" 
-                            required 
-                            class="footer__input">
-                    <textarea name="message" 
-                            id="message" 
-                            placeholder="Сообщение" 
-                            class="footer__input textarea"></textarea>
-                    <!-- <input type="text" name="" id="message" placeholder="Сообщение"> -->
+                    <input type="text" name="name" id="name" placeholder="Фамилия, имя и отчество*" required
+                        class="footer__input">
+                    <input type="email" name="email" id="email" placeholder="Email*" required class="footer__input">
+                    <textarea name="message" id="message" placeholder="Сообщение"
+                        class="footer__input textarea"></textarea>
                     <div class="footer__submit">
+
+                        <label class="footer__pd-checkbox">Согласен на обработку данных
+                            <input class="footer__pd-use" type="checkbox" name="pd-use" id="pd-use" required
+                                value="true">
+                            <span class="checkmark"></span>
+                        </label>
+
                         <input type="submit" class="footer__submit-btn btn-main btn" value="Отправить данные">
-                        <div class="footer__pd-use"><input type="checkbox" 
-                                name="pd-use" 
-                                id="pd-use" 
-                                required 
-                                value="agree"
-                                class="footer__pd-use"> 
-                        <label for="pd-use-label">Согласен на обработку данных</label>
-                    </div>
+
                     </div>
                 </form>
             </div>
 
             <p class="footer__legal-info">
-                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация 
-с широким активом обеспечивает широкому кругу (специалистов) участие 
-в формировании стандартных подходов.
+                Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого
+                факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели
+                развития. Таким образом, консультация
+                с широким активом обеспечивает широкому кругу (специалистов) участие
+                в формировании стандартных подходов.
             </p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    
+
 </body>
 
 </html>
