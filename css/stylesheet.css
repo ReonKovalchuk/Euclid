@@ -1224,7 +1224,7 @@ display: inline-block;
 	padding: 19px 52px;
 }
 
-.footer__pd-checkbox {
+.footer__pd-label {
 	display: block;
 	position: relative;
 	padding-left: 22px;
@@ -1257,7 +1257,7 @@ display: inline-block;
 	background-color: unset;
 }
 
-.checkmark::before {
+.checkmark:before {
 	position: absolute;
 	top: -3px;
 	left: 0;
